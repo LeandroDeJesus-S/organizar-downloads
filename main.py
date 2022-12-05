@@ -2,7 +2,6 @@ import os
 import shutil
 from pathlib import Path
 from collections import defaultdict
-from pprint import pprint
 
 path_downloads = Path.home() / 'Downloads'
 
