@@ -15,7 +15,10 @@ for item in os.listdir(path_downloads):
         items_type[extension[1:]].append(item)
 
 for ext, files in items_type.items():
-    os.mkdir(path_downloads / f'{ext}')
+    path_new_locale = path_downloads / f'{ext}'
+    if not os.path.isdir(path_new_locale):
+        os.mkdir(path_new_locale)
+        
     new_dir_path = path_downloads / f'{ext}'
     for file in files:
         file_path = os.path.join(path_downloads, file)
